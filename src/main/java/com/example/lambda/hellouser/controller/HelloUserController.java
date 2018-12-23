@@ -69,6 +69,15 @@ public class HelloUserController {
     	
 	}
 	
+	@GetMapping("/health")
+	public @ResponseBody ResponseEntity<Void> health() {
+		LOGGER.info("get health ");		
+		
+		return new ResponseEntity<Void>(HttpStatus.OK);
+    	
+    	
+	}
+	
 	private HelloResponse createHelloResponse(HelloRequest request) {
 		
 		
