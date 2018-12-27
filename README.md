@@ -48,6 +48,9 @@ With the cloud formation template file  **hello-user-service-template.json** in 
  - Resppnse: 204 No Content
   
   
+  
+  
+  
  - Http Method: GET 
  - Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
  - Resppnse: 200 OK
