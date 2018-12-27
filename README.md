@@ -10,11 +10,34 @@ HelloUser API is developed by Spring Boot framework. This API runs on tomcat web
 - cd /home/ec2-user/apache-tomcat-9.0.8/bin/ 
 - ./startup.sh
 
-With the cloud formation template file <teamplate_file_name> in this repository, you can create the aws solution that were shown on <diagram name> by running below script with aws cli.
+With the cloud formation template file  **hello-user-service-template.json** in this repository, you can create the aws solution that were shown on **aws-hello-user-service-architecture diagram.png** by running below scripts with aws cli.
+
+- First create a profile
   
- You should run the script for eu-central-1 region. Also before running it, you should create a key pair for ec2 instances and give it as a parameter to the script.
+    aws configure --profile ekoksal7-eu-central-1
+
+    AWS Access Key ID [None]: <Access Key ID>
+    AWS Secret Access Key [None]: <Secret Access Key ID>
+    Default region name [None]: **eu-central-1**
+    Default output format [None]: json
+  
+ - Create a key pair for EC2 instances
  
- When script completes creation of template, it gives the DNS name of the load balancer as output. With this DNS name, you can use the API like below samples:
+    aws ec2 create-key-pair --profile ekoksal7-eu-central-1 --key-name HelloUserServiceKeyPair
+    
+ - Create cloud fromation stack
+ 
+    aws cloudformation create-stack --profile ekoksal7-eu-central-1 --stack-name helloUserServiceStack --capabilities CAPABILITY_IAM --template-body file://<path to template file> --parameters ParameterKey=KeyPairParameter,ParameterValue=HelloUserServiceKeyPair
+  
+  - Wait for completion of stack creation
+  
+    aws cloudformation wait stack-create-complete --profile ekoksal7-eu-central-1  --stack-name helloUserServiceStack
+    
+  - Get laod balancer dns from stack outputs
+    
+    aws cloudformation describe-stacks --profile ekoksal7-eu-central-1 --stack-name helloUserServiceStack
+ 
+ After waiting 10-15 seconds fro ec2 initialization, with load balancer dns name, you can use the API like below samples:
  
  Http Method: PUT 
  Endpoint: <Load Balancer DNS Name>/HelloUserService/hello/John
