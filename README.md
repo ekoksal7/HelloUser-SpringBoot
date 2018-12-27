@@ -37,7 +37,7 @@ With the cloud formation template file  **hello-user-service-template.json** in 
     
     **aws cloudformation describe-stacks --profile ekoksal7-eu-central-1 --stack-name helloUserServiceStack**
  
- After waiting 10-15 seconds fro ec2 initialization, with load balancer dns name, you can use the API like below samples:
+ After waiting 10-15 seconds for ec2 initialization, with load balancer dns name, you can use the API like below samples:
  
  Http Method: PUT 
  Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
