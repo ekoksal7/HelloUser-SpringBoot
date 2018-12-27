@@ -39,21 +39,19 @@ With the cloud formation template file  **hello-user-service-template.json** in 
  
  After waiting 10-15 seconds fro ec2 initialization, with load balancer dns name, you can use the API like below samples:
  
- - Http Method: PUT 
- - Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
- - Body:
+ Http Method: PUT 
+ Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
+ Body:
       {
         "dateOfBirth":"1985-12-30"
       }
- - Resppnse: 204 No Content
+ Resppnse: 204 No Content
   
   
   
-  
-  
- - Http Method: GET 
- - Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
- - Resppnse: 200 OK
+ Http Method: GET 
+ Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
+ Resppnse: 200 OK
  
     a. When John's birthday is in 5 days
       
