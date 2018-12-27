@@ -16,10 +16,10 @@ With the cloud formation template file  **hello-user-service-template.json** in 
   
     aws configure --profile ekoksal7-eu-central-1
 
-    AWS Access Key ID [None]: <Access Key ID>
-    AWS Secret Access Key [None]: <Secret Access Key ID>
-    Default region name [None]: **eu-central-1**
-    Default output format [None]: json
+    - AWS Access Key ID [None]: <Access Key ID>
+    - AWS Secret Access Key [None]: <Secret Access Key ID>
+    - Default region name [None]: **eu-central-1**
+    - Default output format [None]: json
   
  - Create a key pair for EC2 instances
  
