@@ -45,13 +45,13 @@ With the cloud formation template file  **hello-user-service-template.json** in 
       {
         "dateOfBirth":"1985-12-30"
       }
- Resppnse: 204 No Content
+ Response: 204 No Content
   
   
   
  Http Method: GET 
  Endpoint: **<< Load Balancer DNS Name >>/HelloUserService/hello/John**
- Resppnse: 200 OK
+ Response: 200 OK
  
     a. When John's birthday is in 5 days
       
