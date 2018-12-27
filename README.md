@@ -17,7 +17,7 @@ With the cloud formation template file  **hello-user-service-template.json** in 
     aws configure --profile ekoksal7-eu-central-1
 
     - AWS Access Key ID [None]: << Access Key ID >>
-    - AWS Secret Access Key [None]: <Secret Access Key ID>
+    - AWS Secret Access Key [None]: << Secret Access Key ID >>
     - Default region name [None]: **eu-central-1**
     - Default output format [None]: json
   
@@ -25,9 +25,9 @@ With the cloud formation template file  **hello-user-service-template.json** in 
  
     aws ec2 create-key-pair --profile ekoksal7-eu-central-1 --key-name HelloUserServiceKeyPair
     
- - Create cloud fromation stack
+ - Create cloud fromation stack with template file and key pair you have created
  
-    aws cloudformation create-stack --profile ekoksal7-eu-central-1 --stack-name helloUserServiceStack --capabilities CAPABILITY_IAM --template-body file://<path to template file> --parameters ParameterKey=KeyPairParameter,ParameterValue=HelloUserServiceKeyPair
+    aws cloudformation create-stack --profile ekoksal7-eu-central-1 --stack-name helloUserServiceStack --capabilities CAPABILITY_IAM --template-body file://<< path to template file >> --parameters ParameterKey=KeyPairParameter,ParameterValue=HelloUserServiceKeyPair
   
   - Wait for completion of stack creation
   
