@@ -1,6 +1,6 @@
 # HelloUser API Spring Boot AWS Solution
 
-HelloUser API is developed by Spring Boot framework. This API runs on tomcat web container on EC2 instances. When ec2 instances are started up, it gets the application from github and deploy it to the tomcat by running the below script.
+HelloUser API is developed by Spring Boot framework. This API runs on tomcat web container on EC2 instances. EC2 instances are created from a AMI that has java and tomcat in it. When ec2 instances are started up, it gets the application from github and deploy it to the tomcat by running the below script.
 
 #!/bin/bash
 cd /home/ec2-user/projects/
