@@ -68,5 +68,7 @@ With the cloud formation template file  **hello-user-service-template.json** in 
       }
       
   
+  For zero deowntown deployment, when you deploy and get a response from  **<< Load Balancer DNS>>/HelloUserService/health**, you can delete the previous stack by running below script:
   
   
+  **aws cloudformation delete-stack --profile ekoksal7-eu-central-1 --stack-name << previous stack name >>*
