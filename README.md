@@ -12,7 +12,7 @@ HelloUser API is developed by Spring Boot framework. This API runs on tomcat web
 
 With the cloud formation template file  **hello-user-service-template.json** in this repository, you can create the aws solution that were shown on **aws-hello-user-service-architecture diagram.png** by running below scripts with aws cli.
 
-./aws-hello-user-service-architecture diagram.png
+![alt text](https://github.com/ekoksal7/HelloUser-SpringBoot/blob/master/aws-hello-user-service-architecture%20diagram.png)
 
 - First create a profile
   
