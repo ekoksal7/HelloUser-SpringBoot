@@ -68,7 +68,7 @@ With the cloud formation template file  **hello-user-service-template.json** in 
       }
       
   
-  For zero deowntown deployment, when you deploy and get a response from  **<< Load Balancer DNS>>/HelloUserService/health**, update your dns records with new load balancer dns and delete the previous stack by running below script:
+  For no-downtime deployment, when you deploy and get a response from  **<< Load Balancer DNS>>/HelloUserService/health**, update your dns records with new load balancer dns and delete the previous stack by running below script:
   
   
   **aws cloudformation delete-stack --profile ekoksal7-eu-central-1 --stack-name << previous stack name >>**
